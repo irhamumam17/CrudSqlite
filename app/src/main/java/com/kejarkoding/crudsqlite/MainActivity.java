@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.kejarkoding.crudsqlite.adapter.UserModelAdapter;
 import com.kejarkoding.crudsqlite.model.Usermodel;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
     List<Usermodel> usermodelList = new ArrayList<Usermodel>();
     UserModelAdapter adapter;
     LinearLayoutManager layoutManager;
@@ -74,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
                         ednm.setText("");
                         edtl.setText("");
                         idn.setText("");
+                        Toast.makeText(MainActivity.this, "Berhasil menyimpan data !", Toast.LENGTH_SHORT).show();
                         list();
                         Log.d("simpan", "g");
                     }
@@ -115,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                         ednm.setText("");
                         edtl.setText("");
                         idn.setText("");
+                        Toast.makeText(MainActivity.this, "Berhasil mengubah data !", Toast.LENGTH_SHORT).show();
                         list();
                         Log.d("simpan", "g");
                     }
@@ -134,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
                 ednm.setText("");
                 edtl.setText("");
                 idn.setText("");
+                Toast.makeText(MainActivity.this, "Berhasil menghapus data !", Toast.LENGTH_SHORT).show();
                 list();
             }
         });
