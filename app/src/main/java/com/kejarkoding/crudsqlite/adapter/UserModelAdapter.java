@@ -46,6 +46,7 @@ public class UserModelAdapter extends RecyclerView.Adapter<UserModelAdapter.View
                       String tall = usermodels.get(position).getTall();
                       Toast.makeText(context, usermodels.get(position).getId()+" ", Toast.LENGTH_SHORT).show();
                       Intent i = new Intent(context,MainActivity.class);
+                      i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                       i.putExtra("id",ids);
                       i.putExtra("nama",nama);
                       i.putExtra("tinggi",tall);

@@ -137,16 +137,7 @@ public class MainActivity extends AppCompatActivity {
                 list();
             }
         });
-//
-//        int jumlah = db.getUserModelCount();
-//        Log.d("jumlah :", " " + jumlah);
-//        db.deleteAllrc();
 
-
-//
-//        db.updateContact(modelusers);
-
-//       Log.d("test",db.getUserModelCount()+" ");
         list();
     }
     private void list() {
@@ -159,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recycles);
         adapter = new UserModelAdapter(getApplicationContext(), usermodelList);
-        layoutManager = new LinearLayoutManager(this);
+        layoutManager = new LinearLayoutManager(MainActivity.this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
